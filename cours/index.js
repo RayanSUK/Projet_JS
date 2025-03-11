@@ -28,3 +28,42 @@ btn2.addEventListener("click", () => {
   response.classList.add("show-response");
   response.style.background = "red";
 });
+
+// div > #id > .class > baliseHTML
+
+//-------------------------------------------------
+//Mouse Events
+
+const mousemove = document.querySelector(".mousemove");
+
+window.addEventListener("mousemove", (e) => {
+  //event
+  mousemove.style.left = e.pageX + "px";
+  mousemove.style.top = e.pageY + "px"; //pour linstant pas centre
+});
+
+window.addEventListener("mousemove", () => {
+  mousemove.style.transform = "scale(2) translate(-25%,-25%)"; //2 fois plus gors
+});
+
+window.addEventListener("mouseup", () => {
+  //quand tu releve la souris
+  mousemove.style.transform = "scale(1) translate(-50%,-50%)"; //2 fois plus gors
+  mousemove.style.border = "2px solid teal";
+});
+
+questionCOntainer.addEventListener("mouseenter", () => {
+  //survole
+  questionCOntainer.style.background = "rgba(0,0,0,0.6)";
+});
+
+questionCOntainer.addEventListener("mouseout", () => {
+  //desurvole
+  questionCOntainer.style.background = "pink";
+});
+
+response.addEventListener("mouseover", () => {
+  response.style.transform = "rotate(2deg)";
+});
+
+//----------------------------------------------------

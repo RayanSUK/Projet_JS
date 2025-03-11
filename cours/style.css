@@ -11,6 +11,7 @@ body{
     margin: 0;
     color: aliceblue;
     min-height: 200vh;
+    overflow-x: hidden;
 }
 
 .box{
@@ -41,4 +42,21 @@ p{
     visibility: visible;
     opacity: 1; /*passer de 0 a 1 pour faire un effet */
     transform: translateX(0); 
+}
+
+/* ---------------------------------*/
+
+.mousemove{
+    height: 50px; /*hauteur */
+    width: 50px; /*largeur*/
+    border: 2px solid pink;
+    position: absolute;
+    border-radius: 50px;
+
+    transform: translate(-50%,-50%);  /*centrer */
+    transition: 0.1s ease;
+
+    z-index: -1; /*de base éléement en 0 donc arriere plan nég et premier plan pos */
+    
+
 }
