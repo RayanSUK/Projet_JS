@@ -193,10 +193,46 @@ document.body.addEventListener(
 // Stop propagation
 
 questionCOntainer.addEventListener("click", (e) => {
-  alert("test");
   e.stopPropagation(); //pour que une fois que tu fait ca arrete les autres
 });
 
 // removeEventListeners
 
 //-------------------------------------------------
+
+//BOM (brother object model) au dessus de tout (object window)
+
+// console.log(window.innerHeight);
+// console.log(window.scrollY);
+
+//window.open("https://google.com", "cours js", "height=600 ,width=800");
+//window.close()
+
+// Evenements addosés a window
+//window.alert("hello");
+
+//confirm
+btn2.addEventListener("click", () => {
+  confirm("Voulez vous vraiments vous trompez ?");
+});
+
+let answer;
+//prompt
+btn1.addEventListener("click", () => {
+  answer = prompt("Entrez votre nom !");
+
+  questionCOntainer.innerHTML += "<h3> bravo " + answer;
+});
+
+//timer, compte à rebours
+// setTimeout(() => {
+//   questionCOntainer.style.borderRadius = "300px";
+// }, 5000);
+
+// let interval = setInterval(() => {
+//   document.body.innerHTML += "<div class='box'><h2>Nouvelle Boite !</h2></div>";
+// }, 1000);
+
+// document.body.addEventListener("click", () => {
+//   clearInterval(interval);
+// });
