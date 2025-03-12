@@ -139,3 +139,12 @@ form.addEventListener("submit", (e) => {
     alert("Veuillez accepter les CGV");
   }
 });
+
+//----------------------------------------
+
+// ** Load Event **
+window.addEventListener("load", () => {
+  console.log("document chargé !");
+});
+
+//-------------------------------------
