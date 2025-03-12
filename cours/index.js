@@ -147,4 +147,17 @@ window.addEventListener("load", () => {
   console.log("document chargé !");
 });
 
-//-------------------------------------
+//----------------------------------------
+
+// ** Les forEach **
+//const boxes = document.getElementsByClassName("box");
+const boxes = document.querySelectorAll(".box");
+console.log(boxes);
+
+boxes.forEach((box) => {
+  box.addEventListener("click", (e) => {
+    e.target.style.transform = "scale(0.7)";
+  });
+});
+
+//--------------------------------------------------------
