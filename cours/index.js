@@ -91,3 +91,20 @@ const ring = () => {
   audio.src = "./Enter.mp3";
   audio.play();
 };
+
+//-----------------------------------------------------------
+
+// **Scroll event
+
+const nav = document.querySelector("nav");
+window.addEventListener("scroll", (e) => {
+  console.log(window.scrollY);
+
+  if (window.scrollY > 120) {
+    nav.style.top = 0;
+  } else {
+    nav.style.top = "-50px";
+  }
+});
+
+//-----------------------------------------------
