@@ -161,3 +161,29 @@ boxes.forEach((box) => {
 });
 
 //--------------------------------------------------------
+
+// addEventListener  Vs onClick
+
+// document.body.onclick = ()=> {
+//   console.log("CLick");
+// };
+
+//Bubbling ==> fin (de base l'eventListener est paramamètre en mode Bubbling)
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("CLikc1");
+  },
+  false
+);
+
+//par défault c'est false
+
+//UseCapture
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("CLikc2");
+  },
+  true
+);
