@@ -187,3 +187,16 @@ document.body.addEventListener(
   },
   true
 );
+
+//--------------------------------------------------
+
+// Stop propagation
+
+questionCOntainer.addEventListener("click", (e) => {
+  alert("test");
+  e.stopPropagation(); //pour que une fois que tu fait ca arrete les autres
+});
+
+// removeEventListeners
+
+//-------------------------------------------------
